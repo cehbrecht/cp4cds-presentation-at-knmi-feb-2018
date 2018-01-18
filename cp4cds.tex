@@ -29,7 +29,13 @@
 \usepackage{tikz}
 \usepackage{listings}
 
-\title{CP4CDS - LOT1: Climate Model Data + Compute}
+%%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graphicspath{{images/}{draw.io/}} % Root directory of the pictures
+
+%%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{CP4CDS: Climate Model Data + Compute for Copernicus Climate Data Store}
 
 %\subtitle{}
 
@@ -53,7 +59,7 @@ DKRZ - German Climate Compute Center
 STFC - Science and Technology Facilities Council
 }
 
-\date{\footnotesize{February 2018 - Lot1/Lot2 Workshop at KNMI}}
+\date{\footnotesize{February 2018 - MAGIC Workshop at KNMI}}
 
 
 % This is only inserted into the PDF information catalog. Can be left
@@ -116,32 +122,9 @@ STFC - Science and Technology Facilities Council
 % You might wish to add the option [pausesections]
 \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Motivation}
-
-%\subsection[Short First Subsection Name]{First Subsection Name}
-
-% -----------------------------------------------
-\begin{frame}
-\frametitle<presentation>{Let is snow}
-
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[height=2cm]{images/copernicus-logo}
-  \end{figure}
-
-  \begin{itemize}
-    \item One
-    \item Two
-  \end{itemize}
-
-  \centering
-  \footnotesize{\url{https://github.com/cp4cds/copernicus-wps-demo}}
-
-\end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CP4CDS Overview}
+\section{Overview}
 
 % -----------------------------------------------
 \begin{frame}
@@ -149,7 +132,7 @@ STFC - Science and Technology Facilities Council
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/cp4cds.png}
+    \includegraphics[height=5cm]{cp4cds.png}
   \end{figure}
 
   \centering
@@ -163,7 +146,7 @@ STFC - Science and Technology Facilities Council
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/cp4cds-interfaces.png}
+    \includegraphics[height=5cm]{cp4cds-interfaces.png}
   \end{figure}
 
 \end{frame}
@@ -174,7 +157,7 @@ STFC - Science and Technology Facilities Council
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/cp4cds-federated.png}
+    \includegraphics[height=4cm]{cp4cds-federated.png}
   \end{figure}
 
 \end{frame}
@@ -199,11 +182,11 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{ESGF}
+\frametitle<presentation>{ESGF Data Node}
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/cp4cds-data-node-at-ceda}
+    \includegraphics[height=4cm]{cp4cds-data-node-at-ceda}
   \end{figure}
 
   \begin{itemize}
@@ -219,14 +202,13 @@ STFC - Science and Technology Facilities Council
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Compute Service}
 
-
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{CP4CDS Web Processing Service}
+\frametitle<presentation>{CP4CDS Compute Service}
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/cp4cds-wps}
+    \includegraphics[height=6cm]{cp4cds-wps}
   \end{figure}
 
   \centering
@@ -240,7 +222,7 @@ STFC - Science and Technology Facilities Council
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/c3s-magic}
+    \includegraphics[height=5cm]{c3s-magic}
   \end{figure}
 
   \centering
@@ -250,11 +232,25 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
+\frametitle<presentation>{SDDS}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{cp4cds-toolbox}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://github.com/cp4cds/cp4cds-wps-template}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
 \frametitle<presentation>{Ansible}
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=2cm]{images/ansible}
+    \includegraphics[height=2cm]{ansible}
   \end{figure}
 
   \begin{itemize}
@@ -273,7 +269,7 @@ STFC - Science and Technology Facilities Council
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=2cm]{images/conda_logo}
+    \includegraphics[height=2cm]{conda_logo}
   \end{figure}
 
   \begin{itemize}
@@ -287,15 +283,17 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{SDDS}
+\frametitle<presentation>{Docker}
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/cp4cds-toolbox}
+    \includegraphics[height=2cm]{docker}
   \end{figure}
 
-  \centering
-  \footnotesize{\url{https://github.com/cp4cds/cp4cds-wps-template}}
+  \begin{itemize}
+    \item Kubernetes Orchestration
+    \item PyWPS Docker Extension to launch WPS Jobs as Docker Container
+  \end{itemize}
 
 \end{frame}
 
@@ -323,27 +321,11 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{Docker}
-
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[height=2cm]{images/docker}
-  \end{figure}
-
-  \begin{itemize}
-    \item Kubernetes Orchestration
-    \item PyWPS Docker Extension to launch WPS Jobs as Docker Container
-  \end{itemize}
-
-\end{frame}
-
-% -----------------------------------------------
-\begin{frame}
 \frametitle<presentation>{What is PyWPS?}
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=2cm]{images/pywps}
+    \includegraphics[height=2cm]{pywps}
   \end{figure}
 
   \begin{itemize}
@@ -367,42 +349,12 @@ STFC - Science and Technology Facilities Council
 
   \begin{figure}[ht]
     \centering
-    \includegraphics[height=5cm]{images/pywps-scheduler-extension}
+    \includegraphics[height=5cm]{pywps-scheduler-extension}
   \end{figure}
 
   \centering
   \footnotesize{\url{https://github.com/geopython/pywps/blob/develop/docs/extensions.rst}}
 
-\end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Summary}
-
-\begin{frame}
-\frametitle<presentation>{Summary}
-
-\begin{itemize}
-
-  \item Deployment
-\end{itemize}
-
-\end{frame}
-
-% --------------------------------------------------------------
-\begin{frame}
-%\frametitle<presentation>{}
-
-  \begin{figure}[ht]
-   \centering
-   \includegraphics[height=4.5cm]{images/for_the_birds}
-  \end{figure}
-
-\centering
-\Huge{The End}
-
-\centering
-\vspace{0.4cm}
-\footnotesize{\url{http://bird-house.github.io/}}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
