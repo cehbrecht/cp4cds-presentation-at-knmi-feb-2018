@@ -6,9 +6,9 @@ all: help
 .PHONY: help
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
-	@echo "  help        to print this help message. (Default)"
-	@echo "  pdf     		 to generate a pdf."
-	@echo "  clean     		 to clean temporary files."
+	@echo "  help				to print this help message. (Default)"
+	@echo "  pdf				to generate a pdf."
+	@echo "  clean      to clean temporary files."
 
 .PHONY: pdf
 pdf:
