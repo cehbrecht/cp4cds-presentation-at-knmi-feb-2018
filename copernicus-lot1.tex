@@ -52,7 +52,7 @@ DKRZ - German Climate Compute Center
 STFC - Science and Technology Facilities Council
 }
 
-\date{\footnotesize{$1^{th}$ of February 2018/ Lot1/Lot2 Workshop at KNMI}}
+\date{\footnotesize{February 2018/ Lot1-Lot2 Workshop at KNMI}}
 
 
 % This is only inserted into the PDF information catalog. Can be left
@@ -123,16 +123,12 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{The OGC Web Processing Service}
+\frametitle<presentation>{Let is snow}
 
-  \begin{figure}[ht]
-
-   \centering
-   \includegraphics[height=5cm]{images/WPS}
-  \end{figure}
-
-\centering
-\footnotesize{\url{http://www.slideshare.net/TheodorFoerster/restful-web-processing-service}}
+  \begin{itemize}
+    \item One
+    \item Two
+  \end{itemize}
 
 \end{frame}
 
@@ -173,22 +169,6 @@ STFC - Science and Technology Facilities Council
 \begin{itemize}
 
   \item Deployment
-  \begin{itemize}
-    \item Nginx + Gunicorn provide the infrastructure for scalable services
-    \item Birdhouse supports automatic deployment using Conda and Buildout
-  \end{itemize}
-
-  \item{Toolbox}
-  \begin{itemize}
-    \item Web portal and command-line tool for testing and demo of WPS services
-    \item Security middleware to protect the execution of WPS processes
-  \end{itemize}
-
-  \item{Get your hands dirty}
-  \begin{itemize}
-    \item Birdhouse Workshop: \url{http://birdhouse-workshop.readthedocs.io/en/latest/index.html}
-    \item PyWPS Workshop: \url{https://github.com/PyWPS/pywps-workshop}
-  \end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -219,22 +199,9 @@ STFC - Science and Technology Facilities Council
 \begin{frame}
 \frametitle<presentation>{The OGC Web Processing Service}
 
-\begin{itemize}
-\item OGC open web standard for remote geo-spatial processing.
-\item Other widley used OGC web standards: \textbf{WMS}, \textbf{WFS}, \textbf{WCS}.
-\item Three basic requests:
-\begin{itemize}
-      \item  \textit{GetCapabilities}
-      \item  \textit{DescribeProcess}
-      \item  \textit{Execute}
-\end{itemize}
-\item Three basic input/output classes:
-\begin{itemize}
-      \item  \textit{Literal}
-      \item  \textit{Complex} - for geo-spatial data and services
-      \item  \textit{BoundingBox} - for geo-spatial data extent
-\end{itemize}
-\end{itemize}
+  \begin{itemize}
+    \item OGC open web standard for remote geo-spatial processing.
+  \end{itemize}
 \end{frame}
 
 \end{document}
