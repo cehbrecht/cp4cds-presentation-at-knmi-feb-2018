@@ -13,7 +13,7 @@ help:
 .PHONY: pdf
 pdf:
 	@echo "Generating a PDF document ..."
-	@pdflatex copernicus-lot1
+	@pdflatex cp4cds
 
 .PHONY: clean
 clean:
