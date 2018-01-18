@@ -29,7 +29,7 @@
 \usepackage{tikz}
 \usepackage{listings}
 
-\title{Copernicus WPS Solution}
+\title{CP4CDS - LOT1: Climate Model Data + Compute}
 
 %\subtitle{}
 
@@ -37,7 +37,8 @@
 %   affiliation.
 \author{\vspace{2.3cm}\\
 Carsten Ehbrecht\inst{1}
-\and Ag Stephans\inst{2}
+\and Ruth Petrie\inst{2}
+\and Ag Stephens\inst{2}
 }
 %\author{\inst{1}}
 
@@ -52,7 +53,7 @@ DKRZ - German Climate Compute Center
 STFC - Science and Technology Facilities Council
 }
 
-\date{\footnotesize{February 2018/ Lot1-Lot2 Workshop at KNMI}}
+\date{\footnotesize{February 2018 - Lot1/Lot2 Workshop at KNMI}}
 
 
 % This is only inserted into the PDF information catalog. Can be left
@@ -120,10 +121,171 @@ STFC - Science and Technology Facilities Council
 
 %\subsection[Short First Subsection Name]{First Subsection Name}
 
-
 % -----------------------------------------------
 \begin{frame}
 \frametitle<presentation>{Let is snow}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=2cm]{images/copernicus-logo}
+  \end{figure}
+
+  \begin{itemize}
+    \item One
+    \item Two
+  \end{itemize}
+
+  \centering
+  \footnotesize{\url{https://github.com/cp4cds/copernicus-wps-demo}}
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{CP4CDS Overview}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{CP4CDS Services: Data + Compute}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{images/cp4cds.png}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://github.com/cp4cds}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{CP4CDS Federated Services}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{images/cp4cds-federated.png}
+  \end{figure}
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data Service}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Climate Model Data}
+
+  \begin{itemize}
+    \item CMIP5 subset selected for Copernicus.
+    \item Quality-checked data.
+    \item CORDEX is on its way ...
+  \end{itemize}
+
+  \centering
+  \footnotesize{\url{https://cp4cds-index1.ceda.ac.uk/projects/cp4cds_ceda/}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{ESGF}
+
+  \begin{itemize}
+    \item Using vanilla ESGF data nodes.
+    \item Federated via CEDA, IPSL and DKRZ.
+  \end{itemize}
+
+  \centering
+  \footnotesize{\url{https://cp4cds-index1.ceda.ac.uk/projects/cp4cds_ceda/}}
+
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Compute Service}
+
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{CP4CDS Web Processing Service}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{images/cp4cds-wps}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://github.com/cp4cds/copernicus-wps-demo}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{C3S Magic: Climate Diagnostics}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{images/c3s-magic}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://github.com/c3s-magic}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Ansible}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=2cm]{images/ansible}
+  \end{figure}
+
+  \begin{itemize}
+    \item Using Ansible to deploy CP4CDS WPS service.
+    \item Deployment scenarios: single host, cluster, docker orchestration.
+  \end{itemize}
+
+  \centering
+  \footnotesize{\url{https://github.com/bird-house/birdhouse-ansible/tree/master/demo}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Conda}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=2cm]{images/conda_logo}
+  \end{figure}
+
+  \begin{itemize}
+    \item All Application and Diagnostics software dependencies are managed with Conda.
+  \end{itemize}
+
+  \centering
+  \footnotesize{\url{https://conda.io/docs/index.html}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{SDDS}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{images/cp4cds-toolbox}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://github.com/cp4cds/cp4cds-wps-template}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Additional Metadata}
 
   \begin{itemize}
     \item One
@@ -132,33 +294,70 @@ STFC - Science and Technology Facilities Council
 
 \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{PyWPS}
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Clients}
+
+  \begin{itemize}
+    \item One
+    \item Two
+  \end{itemize}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Docker}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=2cm]{images/docker}
+  \end{figure}
+
+  \begin{itemize}
+    \item Kubernetes Orchestration
+    \item PyWPS Docker Extension to launch WPS Jobs as Docker Container
+  \end{itemize}
+
+\end{frame}
 
 % -----------------------------------------------
 \begin{frame}
 \frametitle<presentation>{What is PyWPS?}
 
-\begin{figure}[ht]
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=2cm]{images/pywps}
+  \end{figure}
+
+  \begin{itemize}
+    \item An implementation of the OGC Web Processing Service standard
+    \item Implements WPS 1.0.0 standard (WPS 2.0.0 in progress)
+    \item Coded in the Python language (researcher friendly)
+    \item Easy to hack (developer friendly)
+    \item Relevant contributions by over a dozen individuals
+    \item OSGeo accreditation around the corner \ldots
+  \end{itemize}
+
+  \vspace{0.2cm}
   \centering
-  \includegraphics[height=2cm]{images/pywps}
-\end{figure}
-
-\begin{itemize}
-  \item An implementation of the OGC Web Processing Service standard
-  \item Implements WPS 1.0.0 standard (WPS 2.0.0 in progress)
-  \item Coded in the Python language (researcher friendly)
-  \item Easy to hack (developer friendly)
-  \item Relevant contributions by over a dozen individuals
-  \item OSGeo accreditation around the corner \ldots
-\end{itemize}
-
-\vspace{0.2cm}
-\centering
-\footnotesize{\url{http://pywps.org}}
+  \footnotesize{\url{http://pywps.org}}
 
 \end{frame}
 
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{PyWPS Scheduler Extension}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{images/pywps-scheduler-extension}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://github.com/geopython/pywps/blob/develop/docs/extensions.rst}}
+
+\end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Summary}
