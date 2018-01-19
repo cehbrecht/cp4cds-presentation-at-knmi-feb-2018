@@ -224,7 +224,7 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{C3S Magic: Climate Diagnostics}
+\frametitle<presentation>{Climate Analysis Tools as Service: C3S MAGIC}
 
   \begin{figure}[ht]
     \centering
@@ -252,7 +252,7 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{Deployment Tools}
+\frametitle<presentation>{Deployment Tools: Ansible}
   \begin{columns}[c]
     \begin{column}{.2\textwidth}
       \includegraphics[width=0.6\textwidth]{ansible}
@@ -261,13 +261,20 @@ STFC - Science and Technology Facilities Council
       \begin{itemize}
         \item Using Ansible to deploy CP4CDS WPS service.
         \item Deployment scenarios: single host, cluster, docker orchestration.
-        \item Ansible will replace the current Buildout deployment solution (application level, single host).
+        \item Seperate system installation (Nginx) and application deployment (PyWPS + MAGIC).
+        \item Ansible will replace the current Buildout deployment solution (application level, single host only).
         \item \footnotesize{\url{https://github.com/bird-house/birdhouse-ansible/tree/master/demo}}
       \end{itemize}
     \end{column}
   \end{columns}
   % next row
-  \vrule
+  %\vrule
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Deployment Tools: Conda}
+
   \begin{columns}[c]
     \begin{column}{.2\textwidth}
       \includegraphics[width=\textwidth]{conda_logo}
@@ -284,18 +291,49 @@ STFC - Science and Technology Facilities Council
   \vrule
   \begin{columns}[c]
     \begin{column}{.2\textwidth}
-      \includegraphics[width=\textwidth]{docker}
+      \includegraphics[width=1.3\textwidth]{anaconda-cloud}
     \end{column}
     \begin{column}{.8\textwidth}
       \begin{itemize}
-        \item Kubernetes Container Orchestration
-        \item Planned: PyWPS Docker Extension to launch WPS Jobs as Container
+        \item Using Anaconda Cloud to share Conda packages.
+        \item Production-ready packages are maintained on conda-forge community channel.
+        \item \footnotesize{\url{https://conda-forge.org/}}
       \end{itemize}
     \end{column}
   \end{columns}
 
 \end{frame}
 
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Deployment Tools: Docker}
+
+  \begin{columns}[c]
+    \begin{column}{.2\textwidth}
+      \includegraphics[width=\textwidth]{docker}
+    \end{column}
+    \begin{column}{.8\textwidth}
+      \begin{itemize}
+        \item Kubernetes for Docker container orchestration
+        \item Planned: PyWPS Docker Extension to launch WPS Jobs as Container
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  % next row
+  \vrule
+  \begin{columns}[c]
+    \begin{column}{.2\textwidth}
+      \includegraphics[width=1.2\textwidth]{docker-cloud}
+    \end{column}
+    \begin{column}{.8\textwidth}
+      \begin{itemize}
+        \item Docker containers available on Docker Cloud
+        \item Previous versions of diagnostics can be pulled from Docker Cloud
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
+\end{frame}
 
 % -----------------------------------------------
 \begin{frame}
@@ -340,8 +378,10 @@ STFC - Science and Technology Facilities Council
 \frametitle<presentation>{WPS: Providing Optional Metadata}
 
   \begin{itemize}
-    \item Using WPS Metadata attribute to point to additinal information for input/output parameters.
-    \item Role attribute indicates the semantic of the provided link.
+    \item The DescribeProcess WPS request provides essential information about the process and input/output parameters.
+    \item Using WPS Metadata elements to point to additional information for input/output parameters.
+    \item href attribute links to a resource which returns a JSON document with additional information.
+    \item role attribute indicates the semantic of the provided link.
     \item Additional information can be provided by a WPS meta-helper process.
   \end{itemize}
 
@@ -391,10 +431,10 @@ STFC - Science and Technology Facilities Council
     \item Security middleware to protect the execution of WPS processes
   \end{itemize}
 
-  \item{Get your hands dirty}
+  \item{Demo}
   \begin{itemize}
-    \item Birdhouse Workshop: \url{http://birdhouse-workshop.readthedocs.io/en/latest/index.html}
-    \item PyWPS Workshop: \url{https://github.com/PyWPS/pywps-workshop}
+    \item MAGIC Portal: \url{http://portal.c3s-magic.eu/}
+    \item Generic WPS Client: \url{https://bovec.dkrz.de/processes/list?wps=copernicus}
   \end{itemize}
 \end{itemize}
 
