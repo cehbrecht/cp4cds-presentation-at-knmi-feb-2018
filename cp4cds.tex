@@ -161,6 +161,12 @@ STFC - Science and Technology Facilities Council
     \includegraphics[height=4cm]{cp4cds-federated.png}
   \end{figure}
 
+  \begin{itemize}
+    \item WPS outputs are available on a file-service but can be served by other protocols like OpenDAP, WMS etc.
+    \item ESGF NetCDF files are served via a thredds server, file-service and OpenDAP are enabled by default.
+      Other service protocols can be enabled by as well, like WMS, WCS etc.
+  \end{itemize}
+
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -253,6 +259,7 @@ STFC - Science and Technology Facilities Council
       \begin{itemize}
         \item Using Ansible to deploy CP4CDS WPS service.
         \item Deployment scenarios: single host, cluster, docker orchestration.
+        \item Ansible will replace the current Buildout deployment solution (application level, single host).
         \item \footnotesize{\url{https://github.com/bird-house/birdhouse-ansible/tree/master/demo}}
       \end{itemize}
     \end{column}
@@ -266,6 +273,7 @@ STFC - Science and Technology Facilities Council
     \begin{column}{.8\textwidth}
       \begin{itemize}
         \item All Application and Diagnostics software dependencies are managed with Conda.
+        \item Production-ready packages are maintained on conda-forge community channel.
         \item \footnotesize{\url{https://conda.io/docs/index.html}}
       \end{itemize}
     \end{column}
