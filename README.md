@@ -1,6 +1,8 @@
-# CP4CDS Presentation of WPS solution for climate model data
+# CP4CDS Presentation at MAGIC Workshop
 
-This presentation is for the Copernicus MAGIC workshop at KNMI, February 2018.
+Copernicus MAGIC workshop at KNMI, February 2018
+
+CP4CDS is provides Climate Model Data and Compute to the Copernicus Climate Data Store.
 
 This presentation is generated with LaTeX.
 
@@ -31,4 +33,4 @@ Diagrams (and exported PNG files) are in the folder ``draw.io/``.
 ## Requirements
 
 * You need a LaTeX installation, for example [MikTeX](https://miktex.org/)
-* Poster is using the [Beamer](https://github.com/josephwright/beamer) LaTeX package. It is already part of the sources.
+* It is using the [Beamer](https://github.com/josephwright/beamer) LaTeX package. It is already part of the sources.
