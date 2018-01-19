@@ -9,6 +9,7 @@ help:
 	@echo "  help				to print this help message. (Default)"
 	@echo "  pdf				to generate a pdf."
 	@echo "  clean      to clean temporary files."
+	@echo "  distclean  to clean all unversioned files."
 
 .PHONY: pdf
 pdf:
@@ -17,6 +18,11 @@ pdf:
 
 .PHONY: clean
 clean:
+	@echo "Cleaning temporary files ..."
+	@-rm -f *.aux *.bbl *.blg *.log *.fls *.fdb_latexmk *.synctex.gz
+
+.PHONY: distclean
+distclean:
 	@echo "Cleaning workspace ..."
 	@git diff --quiet HEAD || echo "There are uncommited changes! Not doing 'git clean' ..."
 	@-git clean -dfx
