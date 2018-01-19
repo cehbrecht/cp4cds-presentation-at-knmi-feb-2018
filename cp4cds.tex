@@ -9,6 +9,8 @@
 \mode<presentation>
 {
 \usetheme{Warsaw}
+% \usetheme{Copenhagen}
+\usecolortheme{beaver}
 
 \setbeamercovered{transparent}
 }
@@ -35,9 +37,9 @@
 
 %%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{CP4CDS: Climate Model Data and Compute for Copernicus Climate Data Store}
+\title{CP4CDS}
 
-%\subtitle{}
+\subtitle{Climate Model Data and Compute for Copernicus Climate Data Store}
 
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
@@ -347,17 +349,25 @@ STFC - Science and Technology Facilities Council
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{Clients}
+\frametitle<presentation>{WPS Clients for Demo and Testing}
 \begin{columns}[c]
   \begin{column}{.5\textwidth}
+    \includegraphics[width=\textwidth]{magic-portal}
+  \end{column}
+  \begin{column}{.5\textwidth}
     \includegraphics[width=\textwidth]{phoenix}
+  \end{column}
+\end{columns}
+% next row
+\vrule
+\begin{columns}[c]
+  \begin{column}{.5\textwidth}
+    \includegraphics[width=\textwidth]{birdy-terminal}
   \end{column}
   \begin{column}{.5\textwidth}
     \includegraphics[width=\textwidth]{birdy-terminal}
   \end{column}
 \end{columns}
-% next row
-% \vrule
 
 \end{frame}
 
