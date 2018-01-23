@@ -19,3 +19,11 @@ pure wps access showing browser
 
 add slide for security (oauth + certs) on abstract level
 
+## ruth on data service slides
+
+this is what I have put together for you for the WP2 data management stuff for the magic meeting, 
+please use slides 4 and 5 of this .pptx in place of your slide 8 and 9. 
+Note that for CP4CDS we have not done any replication at this stage that will come later, 
+so I think for the purposes of this talk it is not relevant. 
+The main thing is to advertise the web app cp4cds-qcapp.ceda.ac.uk (certificate coming…) 
+Please let me know if you have any questions or need the original .png screenshots.
