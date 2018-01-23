@@ -1,0 +1,17 @@
+ask ruth about input
+* subset of cmip5 
+* screenshot of qa check app ... public now
+
+shorten text on other protocols like wms
+
+ask phil about load balancing
+
+data service + synda replication 
+
+ask phil about docker solution
+
+take json meta-helper output + phoenix example
+
+a slide for each wps clients ... 
+pure wps access showing browser
+
