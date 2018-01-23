@@ -1,3 +1,5 @@
+add ipsl to authors
+
 ask ruth about input
 * subset of cmip5 
 * screenshot of qa check app ... public now
