@@ -1,23 +1,23 @@
 # Review 2018-01-23
 
-add ipsl to authors
+add ipsl to authors  ... done
 
-ask ruth about input
+ask ruth about input  ... done
 * subset of cmip5
 * screenshot of qa check app ... public now
 
-shorten text on other protocols like wms
+shorten text on other protocols like wms  ... done
 
-ask phil about load balancing
+ask phil about load balancing  ... done
 
-data service + synda replication
+data service + synda replication  ... done
 
 ask phil about docker solution
 
-take json meta-helper output + phoenix example
+take json meta-helper output + phoenix example ... done
 
-a slide for each wps clients ...
-pure wps access showing browser
+a slide for each wps clients ...  done
+pure wps access showing browser   ... done
 
 add slide for security (oauth + certs) on abstract level
 
