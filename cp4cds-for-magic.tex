@@ -509,56 +509,73 @@ IPSL - Institute Pierre Simon Laplace
 \begin{frame}
 \frametitle<presentation>{WPS: Providing Optional Metadata}
 
-  \begin{itemize}
-    \item The DescribeProcess WPS request provides essential information about the process and input/output parameters.
-    \item Using WPS Metadata elements to point to additional information for input/output parameters.
-    \item href attribute links to a resource which returns a JSON document with additional information.
-    \item role attribute indicates the semantic of the provided link.
-    \item Additional information can be provided by a WPS meta-helper process.
-  \end{itemize}
+  \begin{columns}[c]
+    \begin{column}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{client-dynamic-input.png}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item {\bf DescribeProcess} request provides infos about inputs and outputs.
+        \item Static values can be provided directly.
+        \item But ... we need {\bf dynamic values} (dependencies between inputs etc.)
+        \item Solution: using {\bf ows:Metadata} element and WPS {\bf meta-helper service}.
+      \end{itemize}
+    \end{column}
+  \end{columns}
 
 \end{frame}
 
 % -----------------------------------------------
 \begin{frame}[fragile]
-\frametitle<presentation>{Meta: OWS Metadata}
+\frametitle<presentation>{WPS Meta: OWS Metadata Element}
   \lstset{language=XML}
+  {\scriptsize
   \begin{lstlisting}
 <wps:Input>
-  <ows:Title>Geometry to be buffered</ows:Title>
-  <ows:Abstract>Geometry input in GML</ows:Abstract>
-  <ows:Identifier>INPUT_GEOMETRY</ows:Identifier>
+  <ows:Title>Experiment</ows:Title>
+  <ows:Identifier>experiment</ows:Identifier>
   <ows:Metadata
-    xlink:role="http://www.opengis.net/spec/wps/2.0/def/process/description/documentation"
-    xlink:href="http://some.host/profileregistry/implementation/Planar-GML-Buffer.html#input_geometry"/>
-  <wps:ComplexData>
-    <wps:Format mimeType="text/xml" encoding="UTF-8" schema="http://schemas.opengis.net/gml/3.2.1/feature.xsd" default="true"/>
-  </wps:ComplexData>
+    xlink:role="http://www.opengis.net/wps/input/dynamic/meta_esgf"
+    xlink:href="http://some.host/meta-helper/wps"/>
+  <LiteralData>
+    <ows:DataType>string</ows:DataType>
+  </LiteralData>
 </wps:Input>
+  \end{lstlisting}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}[fragile]
+\frametitle<presentation>{WPS Meta: meta-helper service}
+
+  \lstset{language=XML}
+  \begin{lstlisting}
+  http://some.host/meta_helper/wps?
+    Request=Execute &
+    Identifier=meta_esgf&
+    DataInputs=
+      selection="{'model':'MPI-ESM-LR','variable':'tas'}";
+      wanted='experiment'
   \end{lstlisting}
 
 \end{frame}
 
 % -----------------------------------------------
 \begin{frame}[fragile]
-\frametitle<presentation>{Meta: JSON Response}
+\frametitle<presentation>{WPS Meta: JSON Response}
   \lstset{language=JSON}
   \begin{lstlisting}
   {
-     "document-type": "wps-meta-process-response",
-     "context": {
-        "service-id": "cp4cds-wps-ceda-1",
-        "version": "0.1.2"
-     },
-     "body": {
-        "validation": {
-           "validity-status": "incomplete",
-           "validity-comment": "Selections require completion of inputs: Date.",
-           "validity-corrections": []
+    'historical',
+    'rcp26',
+    'rcp45',
+    'rcp85'
+  }
   \end{lstlisting}
 
 \end{frame}
-
 
 % -----------------------------------------------
 \begin{frame}
