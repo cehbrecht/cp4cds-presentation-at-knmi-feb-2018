@@ -19,7 +19,7 @@ take json meta-helper output + phoenix example ... done
 a slide for each wps clients ...  done
 pure wps access showing browser   ... done
 
-add slide for security (oauth + certs) on abstract level
+add slide for security (oauth + certs) on abstract level   ... done
 
 ## ruth on data service slides
 
