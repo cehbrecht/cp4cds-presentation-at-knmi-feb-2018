@@ -163,12 +163,28 @@ IPSL - Institute Pierre Simon Laplace
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{CP4CDS Federated Services}
-
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[height=4cm]{cp4cds-federated.png}
-  \end{figure}
+\frametitle<presentation>{CP4CDS - Load Balancing}
+  \begin{columns}[c]
+    \begin{column}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{cp4cds-federated.png}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item Goals
+        \begin{itemize}
+          \item scale to meet demand and
+          \item to be operationally resilient.
+        \end{itemize}
+        \item Two aspects
+        \begin{itemize}
+          \item Between the three centres
+          \item Within the infrastructure of one of three centres
+        \end{itemize}
+        \item Synchronisation between centres is critical for delivery of load-balanced solution \ldots
+      \end{itemize}
+    \end{column}
+  \end{columns}
 
 \end{frame}
 
