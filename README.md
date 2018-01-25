@@ -21,7 +21,7 @@ Use the ``Makefile`` and just type:
 
 Or:
 
-    $ pdflatex cp4cds
+    $ pdflatex cp4cds-for-magic
 
 ## Draw.io Diagrams
 
