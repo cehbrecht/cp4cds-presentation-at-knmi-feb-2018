@@ -213,20 +213,15 @@ IPSL - Institute Pierre Simon Laplace
     \end{column}
     \begin{column}{.5\textwidth}
       \begin{itemize}
-        \item Goals
-        \begin{itemize}
-          \item scale to meet demand and
-          \item to be operationally resilient.
-        \end{itemize}
-        \item Two aspects
-        \begin{itemize}
-          \item Geographic Load Balancing between three Centres
-          \item Load Balancing within a Centre
-        \end{itemize}
-        \item Synchronisation between centres is critical for delivery of load-balanced solution \ldots
+        \item Goals: scale to meet demand and\\
+            to be operationally resilient.
+        \item Geographic load balancing across three centres.
+        \item Load balancing within a centre.
       \end{itemize}
     \end{column}
   \end{columns}
+  \vfill
+  Synchronisation between centres is critical for delivery of load-balanced solution \ldots
 
 \end{frame}
 
@@ -304,16 +299,24 @@ IPSL - Institute Pierre Simon Laplace
 \frametitle<presentation>{Data Management - QC Tools}
   \begin{itemize}
     \item CEDA-CC: \url{https://github.com/cedadev/ceda-cc}
-    \item CF-Checker: \url{https://pypi.python.org/pypi/cfchecker}
+    \item CF-Checker: \url{http://cfconventions.org/compliance-checker.html}
     \item Time-Checker (\emph{new}): \url{https://github.com/cedadev/time-checks}
   \end{itemize}
 
-  \centering
-  \footnotesize{\url{http://cfconventions.org/compliance-checker.html}}
-
 \end{frame}
 
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Data Management - Data Replication}
+  \begin{itemize}
+    \item Using {\bf Synda} data replication tool
+    \item Data is replicated accross CEDA, IPSL and DKRZ
+  \end{itemize}
 
+  \centering
+  \footnotesize{\url{https://github.com/Prodiguer/synda}}
+
+\end{frame}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
