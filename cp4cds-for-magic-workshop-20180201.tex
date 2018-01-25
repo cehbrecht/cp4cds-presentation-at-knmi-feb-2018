@@ -44,9 +44,10 @@
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 \author{\vspace{2.3cm}\\
-Carsten Ehbrecht\inst{1}
-\and Ruth Petrie\inst{2}
-\and Ag Stephens\inst{2}
+C. Ehbrecht\inst{1}
+\and R. Petrie\inst{2}
+\and A. Stephens\inst{2}
+\and S. Denvil\inst{3}
 }
 %\author{\inst{1}}
 
@@ -59,6 +60,9 @@ DKRZ - German Climate Compute Center
 \and
 \inst{2}%
 STFC - Science and Technology Facilities Council
+\and
+\inst{3}%
+IPSL - Institute Pierre Simon Laplace
 }
 
 \date{\footnotesize{$1^{st}$ of February 2018 / MAGIC Workshop at KNMI}}
@@ -152,11 +156,8 @@ STFC - Science and Technology Facilities Council
     \includegraphics[height=4cm]{cp4cds-interfaces.png}
   \end{figure}
 
-  \begin{itemize}
-    \item WPS outputs are available on a file-service but can be served by other protocols like OpenDAP, WMS etc.
-    \item ESGF NetCDF files are served via a thredds server, file-service and OpenDAP are enabled by default.
-      Other service protocols can be enabled by as well, like WMS, WCS etc.
-  \end{itemize}
+  Other protocols like {\bf Web Map Service} and {\bf Web Coverage Service}
+  are possible for data access and WPS outputs.
 
 \end{frame}
 
