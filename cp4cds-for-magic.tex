@@ -31,6 +31,32 @@
 \usepackage{tikz}
 \usepackage{listings}
 
+% colors
+\usepackage{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+
+% XML listing
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape,
+  escapechar=* % <=  to escape to LaTeX
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,type}% list your attributes here
+}
+
 %%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \graphicspath{{images/}{draw.io/}} % Root directory of the pictures
@@ -457,26 +483,79 @@ IPSL - Institute Pierre Simon Laplace
 \end{frame}
 
 % -----------------------------------------------
+\begin{frame}[fragile]
+\frametitle<presentation>{WPS: Providing Optional Metadata}
+  \lstset{language=XML}
+  \begin{lstlisting}
+<wps:Input>
+  <ows:Title>Geometry to be buffered</ows:Title>
+  <ows:Abstract>Geometry input in GML</ows:Abstract>
+  <ows:Identifier>INPUT_GEOMETRY</ows:Identifier>
+  <ows:Metadata
+    xlink:role="http://www.opengis.net/spec/wps/2.0/def/process/description/documentation"
+    xlink:href="http://some.host/profileregistry/implementation/Planar-GML-Buffer.html#input_geometry"/>
+  <wps:ComplexData>
+    <wps:Format mimeType="text/xml" encoding="UTF-8" schema="http://schemas.opengis.net/gml/3.2.1/feature.xsd" default="true"/>
+  </wps:ComplexData>
+</wps:Input>
+  \end{lstlisting}
+
+\end{frame}
+
+
+% -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{WPS Clients for Demo and Testing}
-\begin{columns}[c]
-  \begin{column}{.5\textwidth}
-    \includegraphics[width=\textwidth]{magic-portal}
-  \end{column}
-  \begin{column}{.5\textwidth}
-    \includegraphics[width=\textwidth]{phoenix}
-  \end{column}
-\end{columns}
-% next row
-\vrule
-\begin{columns}[c]
-  \begin{column}{.5\textwidth}
-    \includegraphics[width=\textwidth]{birdy-terminal}
-  \end{column}
-  \begin{column}{.5\textwidth}
-    \includegraphics[width=\textwidth]{rest-client-post}
-  \end{column}
-\end{columns}
+\frametitle<presentation>{WPS Clients: MAGIC Demo Portal}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{magic-portal}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{http://portal.c3s-magic.eu/}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{WPS Clients: Generic WPS App}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{phoenix-demo}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://bovec.dkrz.de/processes/list?wps=copernicus}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{WPS Clients: Command Line}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{birdy-terminal}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{http://birdy.readthedocs.io/en/latest/}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{WPS Clients: Browser or wget}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{rest-client-post}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{http://birdhouse-workshop.readthedocs.io/en/latest/pywps/testing.html}}
 
 \end{frame}
 
