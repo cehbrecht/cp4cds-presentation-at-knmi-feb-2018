@@ -19,7 +19,7 @@ pdf:
 .PHONY: clean
 clean:
 	@echo "Cleaning temporary files ..."
-	@-rm -f *.aux *.bbl *.blg *.log *.fls *.fdb_latexmk *.synctex.gz
+	@-rm -f *.aux *.bbl *.blg *.log *.fls *.fdb_latexmk *.synctex.gz *.out *.nav *.snm *.toc
 
 .PHONY: distclean
 distclean:
