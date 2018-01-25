@@ -14,7 +14,7 @@ help:
 .PHONY: pdf
 pdf:
 	@echo "Generating a PDF document ..."
-	@pdflatex cp4cds-for-magic-workshop-20180201
+	@pdflatex cp4cds-for-magic
 
 .PHONY: clean
 clean:
