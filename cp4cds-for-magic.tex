@@ -225,6 +225,17 @@ IPSL - Institute Pierre Simon Laplace
 
 \end{frame}
 
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{CP4CDS Access Control}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=5cm]{cp4cds-access-control}
+  \end{figure}
+
+\end{frame}
+
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Data Service}
 
@@ -538,7 +549,8 @@ IPSL - Institute Pierre Simon Laplace
     Request=Execute &
     Identifier=meta_esgf&
     DataInputs=
-      selection="{'model':'MPI-ESM-LR','variable':'tas'}";
+      selection="{'model':'MPI-ESM-LR',
+                    'variable':'tas'}";
       wanted='experiment'
   \end{lstlisting}
 
