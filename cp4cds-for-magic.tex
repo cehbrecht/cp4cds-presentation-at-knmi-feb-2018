@@ -177,16 +177,51 @@ IPSL - Institute Pierre Simon Laplace
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{Data Management}
+\frametitle<presentation>{Climate Model Data}
+
   \begin{itemize}
-    \item Provide a subset of CMIP5 data: \url{https://cp4cds-index1.ceda.ac.uk/}
-    \item Interrogate CP4CDS data web-app: \url{https://cp4cds-qcapp.ceda.ac.uk}
+    \item Provide CMIP5 subset selected for Copernicus.
+    \item Quality-checked data.
+    \item CORDEX is on its way ... another Copernicus project.
   \end{itemize}
-  Data availability matrix:
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{ESGF Data Node}
+
+  \begin{itemize}
+    \item Using vanilla ESGF data nodes.
+    \item Federated between CEDA, IPSL and DKRZ.
+  \end{itemize}
+
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[height=4cm]{cp4cds-data-node-at-ceda}
+  \end{figure}
+
+  \centering
+  \footnotesize{\url{https://cp4cds-index1.ceda.ac.uk/}}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}
+\frametitle<presentation>{Data Management - Web App}
+  \begin{itemize}
+    \item Interrogate CP4CDS data web-app
+    \item Data availability matrix
+  \end{itemize}
+
   \begin{figure}[ht]
     \centering
     \includegraphics[height=4cm]{qcapp.png}
   \end{figure}
+
+  \centering
+  \footnotesize{\url{https://cp4cds-qcapp.ceda.ac.uk}}
+
 
 \end{frame}
 
@@ -220,36 +255,8 @@ IPSL - Institute Pierre Simon Laplace
 
 \end{frame}
 
-% -----------------------------------------------
-\begin{frame}
-\frametitle<presentation>{Climate Model Data}
 
-  \begin{itemize}
-    \item CMIP5 subset selected for Copernicus.
-    \item Quality-checked data.
-    \item CORDEX is on its way ...
-  \end{itemize}
 
-\end{frame}
-
-% -----------------------------------------------
-\begin{frame}
-\frametitle<presentation>{ESGF Data Node}
-
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[height=4cm]{cp4cds-data-node-at-ceda}
-  \end{figure}
-
-  \begin{itemize}
-    \item Using vanilla ESGF data nodes.
-    \item Federated between CEDA, IPSL and DKRZ.
-  \end{itemize}
-
-  \centering
-  \footnotesize{\url{https://cp4cds-index1.ceda.ac.uk/}}
-
-\end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Compute Service}
