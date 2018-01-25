@@ -37,7 +37,7 @@
 \definecolor{darkblue}{rgb}{0.0,0.0,0.6}
 \definecolor{cyan}{rgb}{0.0,0.6,0.6}
 
-% XML listing
+% XML listings
 \lstset{
   basicstyle=\ttfamily,
   columns=fullflexible,
@@ -55,6 +55,43 @@
   identifierstyle=\color{darkblue},
   keywordstyle=\color{cyan},
   morekeywords={xmlns,version,type}% list your attributes here
+}
+
+% JSON listings
+\usepackage{xcolor}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\lstdefinelanguage{JSON}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
 }
 
 %%% Global Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -484,7 +521,7 @@ IPSL - Institute Pierre Simon Laplace
 
 % -----------------------------------------------
 \begin{frame}[fragile]
-\frametitle<presentation>{WPS: Providing Optional Metadata}
+\frametitle<presentation>{Meta: OWS Metadata}
   \lstset{language=XML}
   \begin{lstlisting}
 <wps:Input>
@@ -498,6 +535,26 @@ IPSL - Institute Pierre Simon Laplace
     <wps:Format mimeType="text/xml" encoding="UTF-8" schema="http://schemas.opengis.net/gml/3.2.1/feature.xsd" default="true"/>
   </wps:ComplexData>
 </wps:Input>
+  \end{lstlisting}
+
+\end{frame}
+
+% -----------------------------------------------
+\begin{frame}[fragile]
+\frametitle<presentation>{Meta: JSON Response}
+  \lstset{language=JSON}
+  \begin{lstlisting}
+  {
+     "document-type": "wps-meta-process-response",
+     "context": {
+        "service-id": "cp4cds-wps-ceda-1",
+        "version": "0.1.2"
+     },
+     "body": {
+        "validation": {
+           "validity-status": "incomplete",
+           "validity-comment": "Selections require completion of inputs: Date.",
+           "validity-corrections": []
   \end{lstlisting}
 
 \end{frame}
