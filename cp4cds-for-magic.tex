@@ -383,12 +383,13 @@ IPSL - Institute Pierre Simon Laplace
 
 % -----------------------------------------------
 \begin{frame}
-\frametitle<presentation>{Climate Analysis Tools as Service: C3S MAGIC}
+\frametitle<presentation>{Climate Analysis: C3S MAGIC Toolbox}
 
   \begin{figure}[ht]
     \centering
     \includegraphics[height=5cm]{c3s-magic}
   \end{figure}
+  Used by CP4CDS {\bf Processing Backend} for CMIP5 climate model projections.
 
   \centering
   \footnotesize{\url{https://github.com/c3s-magic}}
@@ -421,14 +422,15 @@ IPSL - Institute Pierre Simon Laplace
         \item Ansible: Python library, no services, only SSH for remote deployment.
         \item Using Ansible to deploy CP4CDS WPS service.
         \item Deployment scenarios: single host, cluster, docker orchestration.
-        \item Seperate system installation (Nginx) and application deployment (PyWPS + MAGIC).
+        \item Separate system installation (Nginx) and application deployment (PyWPS + MAGIC).
         \item Ansible will replace the current Buildout deployment solution (application level, single host only).
-        \item \footnotesize{\url{https://github.com/bird-house/birdhouse-ansible/tree/master/demo}}
       \end{itemize}
     \end{column}
   \end{columns}
-  % next row
-  %\vrule
+
+  \vfill
+  \centering
+  \footnotesize{\url{https://github.com/bird-house/birdhouse-ansible/tree/master/demo}}
 \end{frame}
 
 % -----------------------------------------------
