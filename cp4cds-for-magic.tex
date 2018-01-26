@@ -360,11 +360,22 @@ IPSL - Institute Pierre Simon Laplace
 \begin{frame}
 \frametitle<presentation>{CP4CDS Compute Service}
 
-  \begin{figure}[ht]
-    \centering
-    \includegraphics[height=6cm]{cp4cds-wps}
-  \end{figure}
 
+  \begin{columns}[c]
+    \begin{column}{.5\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{cp4cds-wps}
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \begin{itemize}
+        \item A WPS request form WPS client.
+        \item Nginx/Gunicorn delegates request to PyWPS WSGI app.
+        \item Processing Backend has read-only access to data pool.
+        \item Using PyWPS scheduler extension.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vfill
   \centering
   \footnotesize{\url{https://github.com/cp4cds/copernicus-wps-demo}}
 
