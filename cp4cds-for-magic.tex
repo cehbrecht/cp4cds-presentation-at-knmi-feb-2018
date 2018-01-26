@@ -384,6 +384,7 @@ IPSL - Institute Pierre Simon Laplace
     \end{column}
     \begin{column}{.8\textwidth}
       \begin{itemize}
+        \item Ansible: Python library, no services, only SSH for remote deployment.
         \item Using Ansible to deploy CP4CDS WPS service.
         \item Deployment scenarios: single host, cluster, docker orchestration.
         \item Seperate system installation (Nginx) and application deployment (PyWPS + MAGIC).
@@ -407,7 +408,6 @@ IPSL - Institute Pierre Simon Laplace
     \begin{column}{.8\textwidth}
       \begin{itemize}
         \item All Application and Diagnostics software dependencies are managed with Conda.
-        \item Production-ready packages are maintained on conda-forge community channel.
         \item \footnotesize{\url{https://conda.io/docs/index.html}}
       \end{itemize}
     \end{column}
@@ -452,8 +452,9 @@ IPSL - Institute Pierre Simon Laplace
     \end{column}
     \begin{column}{.8\textwidth}
       \begin{itemize}
-        \item Docker containers available on Docker Cloud
-        \item Previous versions of diagnostics can be pulled from Docker Cloud
+        \item Docker containers available on Docker Cloud ... for development and testing.
+        \item We might have our own Docker repository for production.
+        \item Previous versions of diagnostics can be pulled from Docker repository.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -529,8 +530,8 @@ IPSL - Institute Pierre Simon Laplace
   <ows:Title>Experiment</ows:Title>
   <ows:Identifier>experiment</ows:Identifier>
   <ows:Metadata
-    xlink:role="http://www.opengis.net/wps/input/dynamic/meta_esgf"
-    xlink:href="http://some.host/meta-helper/wps"/>
+    xlink:href="http://some.host/meta-helper/wps"
+    xlink:role="http://www.opengis.net/wps/input/dynamic/meta_esgf"/>
   <LiteralData>
     <ows:DataType>string</ows:DataType>
   </LiteralData>
